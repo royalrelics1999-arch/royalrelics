@@ -12,7 +12,7 @@ const PRODUCTS = [
     price: 799,
     tag: "NEW ARRIVAL",
     description: "A translucent smoke-brown frame with warm gradient lenses and a bold, confident silhouette.",
-    image: IMAGE_ROOT + "frame-smoke-brown-1.png",
+    image: IMAGE_ROOT + "frame-smoke-brown-1.jpeg.png",
     gallery: [
       IMAGE_ROOT + "frame-smoke-brown-1.jpeg.png",
       IMAGE_ROOT + "frame-smoke-brown-2.jpeg.png",
@@ -44,7 +44,7 @@ const PRODUCTS = [
     price: 799,
     tag: "NEW ARRIVAL",
     description: "A crystal-clear frame with a rich red tint.",
-    image: IMAGE_ROOT + "frame-crystal-red-1.png",
+    image: IMAGE_ROOT + "frame-crystal-red-1.jpeg.png",
     gallery: [
       IMAGE_ROOT + "frame-crystal-red-1.jpeg.png",
       IMAGE_ROOT + "frame-crystal-red-2.jpeg.png",
@@ -60,7 +60,7 @@ const PRODUCTS = [
     price: 799,
     tag: "NEW ARRIVAL",
     description: "A vivid transparent-blue frame.",
-    image: IMAGE_ROOT + "frame-transparent-blue-1.jpeg",
+    image: IMAGE_ROOT + "frame-transparent-blue-1.jpeg.png",
     gallery: [
       IMAGE_ROOT + "frame-transparent-blue-1.jpeg.png",
       IMAGE_ROOT + "frame-transparent-blue-2.jpeg.png",
