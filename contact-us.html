@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Contact ROYALRELICS customer support for orders, products and general enquiries.">
+
+  <title>Contact Us | ROYALRELICS®</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f8f7f3;
+      color: #171717;
+      line-height: 1.7;
+    }
+
+    .announcement {
+      background: #111;
+      color: #e5c35b;
+      text-align: center;
+      padding: 10px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .header {
+      background: #fff;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8e5dc;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .brand-name span {
+      color: #c39a32;
+      font-size: 15px;
+    }
+
+    .tagline {
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: #111;
+      font-size: 12px;
+      font-weight: 700;
+      border-bottom: 2px solid #c39a32;
+      padding-bottom: 5px;
+    }
+
+    .hero {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .eyebrow {
+      color: #e5c35b;
+      font-size: 11px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 6vw, 58px);
+      margin: 15px 0;
+    }
+
+    .hero p {
+      color: #c9c9c9;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 65px auto;
+      padding: 0 25px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 35px;
+      border: 1px solid #eeeae0;
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f1db;
+      color: #a27c22;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card a {
+      color: #9b7720;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .business-box {
+      background: #111;
+      color: white;
+      padding: 40px;
+      margin-top: 35px;
+    }
+
+    .business-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #e5c35b;
+      margin-bottom: 20px;
+    }
+
+    .business-box p {
+      color: #ddd;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .business-box strong {
+      color: #e5c35b;
+    }
+
+    .support-note {
+      background: white;
+      padding: 30px;
+      margin-top: 25px;
+      border-left: 4px solid #c39a32;
+    }
+
+    .support-note h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .support-note p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .policy-links {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .policy-links h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 18px;
+      font-size: 23px;
+    }
+
+    .policy-links a {
+      display: inline-block;
+      color: #98731e;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 7px 12px;
+    }
+
+    .footer {
+      background: #111;
+      color: white;
+      padding: 35px 7%;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span {
+      color: #e5c35b;
+    }
+
+    .footer p {
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .footer a {
+      color: #e5c35b;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      margin-top: 20px;
+      color: #888;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 650px) {
+      .header {
+        padding: 18px 5%;
+      }
+
+      .brand-name {
+        font-size: 21px;
+      }
+
+      .tagline {
+        font-size: 7px;
+        letter-spacing: 1px;
+      }
+
+      .home-link {
+        font-size: 10px;
+      }
+
+      .hero {
+        padding: 55px 15px;
+      }
+
+      .container {
+        margin: 40px auto;
+        padding: 0 15px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 25px;
+      }
+
+      .business-box {
+        padding: 28px 22px;
+      }
+
+      .intro h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    TIMELESS STYLE. ROYAL CHARACTER.
+  </div>
+
+  <header class="header">
+
+    <a href="index.html" class="brand">
+      <div class="brand-name">ROYALRELICS<span>®</span></div>
+      <div class="tagline">TIMELESS STYLE. ROYAL CHARACTER.</div>
+    </a>
+
+    <a href="index.html" class="home-link">
+      ← BACK TO HOME
+    </a>
+
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">WE ARE HERE TO HELP</p>
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you.</p>
+  </section>
+
+  <main class="container">
+
+    <div class="intro">
+      <h2>Let's Connect.</h2>
+
+      <p>
+        Have a question about our eyewear, an existing order
+        or our services? Get in touch with ROYALRELICS®.
+        We will do our best to assist you.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <div class="contact-icon">✉</div>
+
+        <h3>Email Support</h3>
+
+        <p>
+          For product enquiries, orders and general support.
+        </p>
+
+        <a href="mailto:royalrelics1999@gmail.com">
+          royalrelics1999@gmail.com
+        </a>
+
+      </div>
+
+      <div class="contact-card">
+
+        <div class="contact-icon">☎</div>
+
+        <h3>Phone Support</h3>
+
+        <p>
+          Contact us for order-related enquiries and assistance.
+        </p>
+
+        <a href="tel:+918308801911">
+          +91 8308801911
+        </a>
+
+      </div>
+
+      <div class="contact-card">
+
+        <div class="contact-icon">⌖</div>
+
+        <h3>Business Location</h3>
+
+        <p>
+          Our business location is:
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Kolhapur%2C+Maharashtra%2C+India"
+           target="_blank" rel="noopener">
+          Kolhapur, Maharashtra, India
+        </a>
+
+      </div>
+
+      <div class="contact-card">
+
+        <div class="contact-icon">◈</div>
+
+        <h3>Grievance Support</h3>
+
+        <p>
+          For complaints regarding orders, products,
+          payments, delivery or privacy.
+        </p>
+
+        <a href="grievance-redressal.html">
+          View Grievance Redressal ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="business-box">
+
+      <h2>Business Information</h2>
+
+      <p><strong>Brand Name:</strong> ROYALRELICS®</p>
+
+      <p><strong>Legal Name:</strong> Parth Sayaji Bhosale</p>
+
+      <p><strong>Business Type:</strong> Individual</p>
+
+      <p><strong>GST Status:</strong> Not Registered</p>
+
+      <p><strong>Sales Territory:</strong> India</p>
+
+      <p><strong>Email:</strong> royalrelics1999@gmail.com</p>
+
+      <p><strong>Mobile:</strong> +91 8308801911</p>
+
+      <p><strong>Location:</strong> Kolhapur, Maharashtra, India</p>
+
+      <p><strong>Full Business Address:</strong> [EDIT HERE]</p>
+
+    </div>
+
+    <div class="support-note">
+
+      <h3>Customer Support & Complaints</h3>
+
+      <p>
+        We aim to acknowledge consumer complaints within
+        48 hours and resolve them within one month,
+        in accordance with applicable consumer protection rules.
+      </p>
+
+      <p style="margin-top:10px;">
+        For privacy-related requests, please refer to
+        our Privacy Policy.
+      </p>
+
+    </div>
+
+    <div class="policy-links">
+
+      <h3>Helpful Information</h3>
+
+      <a href="privacy-policy.html">Privacy Policy</a>
+
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+
+      <a href="shipping-policy.html">Shipping & Delivery</a>
+
+      <a href="cancellation-policy.html">Cancellation Policy</a>
+
+      <a href="grievance-redressal.html">Grievance Redressal</a>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-brand">
+      ROYALRELICS<span>®</span>
+    </div>
+
+    <p>TIMELESS STYLE. ROYAL CHARACTER.</p>
+
+    <a href="index.html">← RETURN TO HOMEPAGE</a>
+
+    <div class="footer-bottom">
+      © 2026 ROYALRELICS®. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+</body>
+</html>

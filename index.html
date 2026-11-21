@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover timeless premium eyewear at RoyalRelics.">
+  <title>RoyalRelics — Eyewear with Character</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span>Welcome to RoyalRelics</span>
+    <span class="announcement-note">CRAFTED FOR EVERY POINT OF VIEW</span>
+  </div>
+
+  <header class="site-header">
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <a href="index.html" class="brand">
+      <div class="brand-name">ROYALRELICS<sup>®</sup></div>
+      <div class="brand-tagline">TIMELESS STYLE. ROYAL CHARACTER.</div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#eyeglasses">EYEGLASSES</a>
+      <a href="#sunglasses">SUNGLASSES</a>
+      <a href="#collection">COLLECTION</a>
+      <a href="about-us.html">OUR STORY</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="icon-btn cart-trigger" id="cartToggle" aria-label="Shopping bag">BAG <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <section class="search-panel" id="searchPanel">
+    <input id="searchInput" type="search" placeholder="Search frames, styles, colours..." aria-label="Search products">
+    <button id="searchClose" class="text-btn">CLOSE ✕</button>
+  </section>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow light">THE ART OF PREMIUM EYEWEAR</p>
+        <h1>Find your<br><em>perfect frame.</em></h1>
+        <p class="hero-sub">Timeless frames. Royal character.<br>Made to see the world in your style.</p>
+        <a class="button button-yellow" href="#collection">SHOP EYEWEAR</a>
+      </div>
+      <div class="hero-index">01 / 03</div>
+    </section>
+
+    <section class="intro-strip">
+      <p>DESIGNED TO BE SEEN.</p><span>✳</span><p>MADE TO BE YOURS.</p><span>✳</span><p>BUILT TO LAST.</p>
+    </section>
+
+    <section class="category-section" id="collection">
+      <div class="section-heading">
+        <div><p class="eyebrow">EXPLORE RoyalRelics</p><h2>Frames for every side of you.</h2></div>
+        <p class="section-description">From everyday essentials to statement pieces, find the frame that feels like you.</p>
+      </div>
+      <div class="category-grid">
+        <a class="category-card category-one" id="eyeglasses" href="#products">
+          <div><span>01 / OPTICAL</span><h3>Eyeglasses</h3><b>SHOP NOW ↗</b></div>
+        </a>
+        <a class="category-card category-two" id="sunglasses" href="#products">
+          <div><span>02 / SUN</span><h3>Sunglasses</h3><b>SHOP NOW ↗</b></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading product-heading">
+        <div><p class="eyebrow">THE RoyalRelics EDIT</p><h2>Signature frames.</h2></div>
+        <div class="product-controls">
+          <input id="productSearch" type="search" placeholder="Find a frame..." aria-label="Filter frames">
+          <select id="categoryFilter" aria-label="Filter category">
+            <option value="all">All frames</option>
+            <option value="Eyeglasses">Eyeglasses</option>
+            <option value="Sunglasses">Sunglasses</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-banner">
+      <div class="feature-photo"></div>
+      <div class="feature-copy">
+        <p class="eyebrow light">THE DETAILS MATTER</p>
+        <h2>Quiet confidence.<br><em>Unmistakable style.</em></h2>
+        <p>Thoughtful shapes, considered details and a fit that feels right. Discover the RoyalRelics approach to everyday eyewear.</p>
+        <a class="button button-outline" href="about-us.html">THE RoyalRelics DIFFERENCE ↗</a>
+      </div>
+    </section>
+
+   
+<section class="brand-experience" id="story">
+
+  <div class="experience-heading">
+    <p class="eyebrow">THE ROYALRELICS EXPERIENCE</p>
+
+    <h2>
+      Good design never<br>
+      <em>needs to shout.</em>
+    </h2>
+
+    <p class="experience-intro">
+      More than eyewear. A reflection of your personality,
+      confidence and timeless style.
+    </p>
+  </div>
+
+  <div class="experience-grid">
+
+    <div class="experience-card">
+      <span class="experience-number">01 / OUR DIFFERENCE</span>
+      <div class="experience-icon">✦</div>
+      <h3>The RoyalRelics Difference</h3>
+      <p>
+        Discover a distinctive approach to eyewear,
+        where elegance meets individuality and
+        every detail has a purpose.
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <span class="experience-number">02 / OUR DESIGN</span>
+      <div class="experience-icon">◈</div>
+      <h3>Designed for Your Identity</h3>
+      <p>
+        Thoughtful shapes, considered details and
+        styles that let your personality speak
+        without saying a word.
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <span class="experience-number">03 / YOUR STYLE</span>
+      <div class="experience-icon">✧</div>
+      <h3>Find Your Signature Style</h3>
+      <p>
+        From everyday eyeglasses to statement
+        sunglasses, explore styles that feel
+        uniquely yours.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="experience-bottom">
+    <p>TIMELESS STYLE. ROYAL CHARACTER.</p>
+    <a href="about-us.html" class="experience-button">
+      DISCOVER OUR STORY ↗
+    </a>
+  </div>
+
+</section>
+
+
+    <section class="newsletter">
+      <div><p class="eyebrow">STAY IN THE FRAME</p><h2>A little RoyalRelics in your inbox.</h2><p>Be first to know about new arrivals and exclusive offers.</p></div>
+      <form id="newsletterForm"><input type="email" required placeholder="Your email address" aria-label="Email address"><button type="submit">SIGN ME UP ↗</button></form>
+      <p class="newsletter-message" id="newsletterMessage" aria-live="polite"></p>
+    </section>
+  </main>
+
+ <footer class="footer">
+
+  <div class="footer-top">
+    <a class="brand footer-brand" href="index.html">
+      ROYALRELICS<span>®</span>
+    </a>
+    <p>SEE YOURSELF DIFFERENTLY.</p>
+  </div>
+
+  <div class="footer-columns">
+
+    <!-- EXPLORE -->
+    <div>
+      <h4>EXPLORE</h4>
+      <a href="#eyeglasses">Eyeglasses</a>
+      <a href="#sunglasses">Sunglasses</a>
+      <a href="#products">All Frames</a>
+    </div>
+
+    <!-- HELP -->
+<div>
+  <h4>HELP & SUPPORT</h4>
+  <a href="contact-us.html">Contact Us</a>
+  <a href="about-us.html">About RoyalRelics</a>
+  <a href="shipping-policy.html">Shipping & Delivery</a>
+</div>
+
+    <!-- LEGAL -->
+    <div>
+      <h4>LEGAL & POLICIES</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+      <a href="cancellation-policy.html">Cancellation Policy</a>
+      <a href="grievance-redressal.html">Grievance Redressal</a>
+    </div>
+
+    <!-- FOLLOW -->
+    <div>
+      <h4>FOLLOW US</h4>
+      <a href="https://www.instagram.com/royalrelics19/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a href="#" target="_blank">Pinterest ↗</a>
+    </div>
+
+    <div class="footer-note">
+      A new perspective<br>
+      starts here.
+    </div>
+
+  </div>
+
+  <div class="footer-contact">
+    <p><strong>ROYALRELICS®</strong></p>
+    <p>Email: royalrelics1999@gmail.com</p>
+    <p>Phone: 8308801911</p>
+    <p>Kolhapur, Maharashtra, India</p>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 ROYALRELICS®. ALL RIGHTS RESERVED.</span>
+    <span>INDIA · INR ₹</span>
+  </div>
+
+</footer>
+
+  <!-- Product details modal -->
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <div class="product-modal-content" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+      <button class="product-modal-close" id="productModalClose" aria-label="Close product details">✕</button>
+      <div id="productModalBody"></div>
+    </div>
+  </div>
+
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head"><h3>Your bag <span id="drawerCount">(0)</span></h3><button class="icon-btn" id="cartClose" aria-label="Close bag">✕</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Your bag is currently empty.</p></div>
+    <button class="button button-dark" id="checkoutButton">
+  CONTINUE TO WHATSAPP
+</button>
+<small>Place your order directly through WhatsApp.</small>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
