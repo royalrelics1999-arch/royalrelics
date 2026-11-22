@@ -1338,39 +1338,77 @@ function renderProducts() {
   }).join("");
 }
 
-
 // ==========================================
 // INITIALIZE WEBSITE
 // ==========================================
 
-renderProducts();
-renderCart();
+// CHROME (12) आणि AQUA (28) यांची Position Swap
+const chromeIndex = PRODUCTS.findIndex(product => product.id === 12);
+const aquaIndex = PRODUCTS.findIndex(product => product.id === 28);
+
+if (chromeIndex !== -1 && aquaIndex !== -1) {
+  [PRODUCTS[chromeIndex], PRODUCTS[aquaIndex]] =
+    [PRODUCTS[aquaIndex], PRODUCTS[chromeIndex]];
+}
 
 
 // ==========================================
-// ROYALRELICS SCRIPT COMPLETED
+// DISPLAY ALL PRODUCTS IN ONE COMMON GRID
 // ==========================================
 
-  const category = categoryFilter.value;
-  const query = productSearch.value.trim().toLowerCase();
+function renderProducts() {
 
-  const matchesFilter = product =>
+  if (!productGrid) return;
+
+  const category = categoryFilter
+    ? categoryFilter.value
+    : "all";
+
+  const query = productSearch
+    ? productSearch.value.trim().toLowerCase()
+    : "";
+
+  const filteredProducts = PRODUCTS.filter(product =>
+
     (category === "all" || product.type === category) &&
+
     (
       product.name.toLowerCase().includes(query) ||
       product.type.toLowerCase().includes(query) ||
       product.colour.toLowerCase().includes(query)
-    );
+    )
 
-  // First 12 products are displayed in the Tom Ford section.
-  const tomFordProducts = PRODUCTS.slice(0, 12).filter(matchesFilter);
-  const otherProducts = PRODUCTS.slice(12).filter(matchesFilter);
+  );
 
-  const renderCards = (products, startIndex) => products.map(product => {
-    const productNumber = String(PRODUCTS.findIndex(item => item.id === product.id) + 1).padStart(2, "0");
+
+  // NO PRODUCT FOUND
+  if (!filteredProducts.length) {
+
+    productGrid.innerHTML =
+      '<p class="no-frames">No frames found. Try another search.</p>';
+
+    return;
+  }
+
+
+  // PRODUCT CARDS
+  productGrid.innerHTML = filteredProducts.map(product => {
+
+    const productNumber = String(
+      PRODUCTS.findIndex(item => item.id === product.id) + 1
+    ).padStart(2, "0");
+
+
+    const fallbackImage =
+      (product.gallery && product.gallery.length)
+        ? product.gallery[0]
+        : product.image;
+
 
     return `
+
       <article class="product-card">
+
         <div
           class="product-image"
           data-details="${product.id}"
@@ -1378,53 +1416,76 @@ renderCart();
           tabindex="0"
           aria-label="View ${product.name} details"
         >
-          <span class="product-number">${productNumber}</span>
-          <span class="product-tag">${product.tag}</span>
+
+          <span class="product-number">
+            ${productNumber}
+          </span>
+
+          <span class="product-tag">
+            ${product.tag}
+          </span>
+
           <img
             src="${product.image}"
             alt="${product.name}"
             loading="lazy"
-            onerror="this.onerror=null;this.src='${product.gallery[0] || product.image}';"
+            onerror="this.onerror=null;this.src='${fallbackImage}';"
           >
-          <span class="view-product">VIEW FRAME ↗</span>
+
+          <span class="view-product">
+            VIEW FRAME ↗
+          </span>
+
         </div>
+
 
         <div class="product-info">
+
           <div>
-            <h3 data-details="${product.id}" tabindex="0" role="button">${product.name}</h3>
-            <p>${product.type} · ${product.colour}</p>
+
+            <h3
+              data-details="${product.id}"
+              tabindex="0"
+              role="button"
+            >
+              ${product.name}
+            </h3>
+
+            <p>
+              ${product.type} · ${product.colour}
+            </p>
+
           </div>
-          <span class="product-price">${money(product.price)}</span>
+
+          <span class="product-price">
+            ${money(product.price)}
+          </span>
+
         </div>
 
-        <button class="add-button" data-add="${product.id}">ADD TO BAG +</button>
+
+        <button
+          class="add-button"
+          data-add="${product.id}"
+        >
+          ADD TO BAG +
+        </button>
+
       </article>
+
     `;
+
   }).join("");
 
-  if (!tomFordProducts.length && !otherProducts.length) {
-    productGrid.innerHTML = '<p class="no-frames">No frames found. Try another search.</p>';
-    return;
-  }
-
-  productGrid.innerHTML = `
-    ${tomFordProducts.length ? `
-      <h2 class="collection-section-title">TRENDING COLLECTION</h2>
-      <p class="collection-section-subtitle">A considered selection of signature frames.</p>
-      ${renderCards(tomFordProducts, 0)}
-    ` : ""}
-
-    ${otherProducts.length ? `
-      <h2 class="collection-section-title">ROYALRELICS COLLECTION</h2>
-      <p class="collection-section-subtitle">Explore the complete eyewear collection.</p>
-      ${renderCards(otherProducts, 12)}
-    ` : ""}
-  `;
 }
 
-// Render the complete product gallery immediately when the page loads.
-// Previously this was missing, so products appeared only after changing the filter.
+
+// ==========================================
+// INITIALIZE WEBSITE
+// ==========================================
+
 renderProducts();
+
 renderCart();
 
 
